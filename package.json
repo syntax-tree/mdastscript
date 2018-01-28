@@ -1,0 +1,32 @@
+{
+  "name": "mdastscript",
+  "version": "0.1.0",
+  "description": "DSL for creating virtual MDAST trees",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syntax-tree/mdastscript.git"
+  },
+  "keywords": [
+    "mdast",
+    "markdown",
+    "dsl"
+  ],
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+    "Yoshiya Hinosawa <stibium121@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syntax-tree/mdastscript/issues"
+  },
+  "homepage": "https://github.com/syntax-tree/mdastscript#readme",
+  "devDependencies": {
+    "nyc": "^11.4.1",
+    "tape": "^4.8.0"
+  }
+}
