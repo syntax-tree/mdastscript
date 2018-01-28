@@ -2,9 +2,9 @@
   "name": "mdastscript",
   "version": "0.1.0",
   "description": "DSL for creating virtual MDAST trees",
-  "main": "mdastscript.js",
+  "main": "dist/mdastscript.js",
   "scripts": {
-    "test": "tape test.js",
+    "test": "xo && npx tape -r babel-register test.js",
     "build": "microbundle -f cjs,umd",
     "prepublish": "npm run build"
   },
@@ -28,8 +28,22 @@
   },
   "homepage": "https://github.com/syntax-tree/mdastscript#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "microbundle": "^0.4.3",
     "nyc": "^11.4.1",
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": true,
+    "esnext": false,
+    "rules": {
+      "no-self-compare": "off",
+      "guard-for-in": "off"
+    },
+    "ignores": [
+      "hastscript.js"
+    ]
   }
 }
