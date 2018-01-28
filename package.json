@@ -4,7 +4,9 @@
   "description": "DSL for creating virtual MDAST trees",
   "main": "dist/mdastscript.js",
   "scripts": {
-    "test": "xo && npx tape -r babel-register test.js",
+    "test": "xo && tape -r babel-register test.js",
+    "cov": "nyc -r text -r lcov npm test",
+    "codecov": "npm run cov && codecov",
     "build": "microbundle -f cjs,umd",
     "prepublish": "npm run build"
   },
@@ -30,6 +32,7 @@
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "codecov": "^3.0.0",
     "microbundle": "^0.4.3",
     "nyc": "^11.4.1",
     "tape": "^4.8.0",
