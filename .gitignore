@@ -2,8 +2,7 @@
 /node_modules
 
 # build
-/mdastscript.js
-/mdastscript.min.js
+/mdastscript.*
 
 # nyc
 /coverage

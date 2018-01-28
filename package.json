@@ -2,9 +2,11 @@
   "name": "mdastscript",
   "version": "0.1.0",
   "description": "DSL for creating virtual MDAST trees",
-  "main": "index.js",
+  "main": "mdastscript.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape test.js",
+    "build": "microbundle -f cjs,umd",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/syntax-tree/mdastscript#readme",
   "devDependencies": {
+    "microbundle": "^0.4.3",
     "nyc": "^11.4.1",
     "tape": "^4.8.0"
   }
